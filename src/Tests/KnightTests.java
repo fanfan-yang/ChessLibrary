@@ -133,15 +133,15 @@ public class KnightTests {
         game.gameBoard.movePiece(knight, 2, 2);
     }
 
-    @Test
-    public void canCapturePieces() throws Exception
-    {
-        Game game = new Game();
-        Piece knight = game.gameBoard.boardArray[1][0];
-        Piece pawn = game.gameBoard.boardArray[3][1];
-        pawn.player = game.player2;
-        game.gameBoard.movePiece(knight, 3, 1);
-
-        assertEquals(knight, game.gameBoard.boardArray[3][1]);
-    }
+//    @Test
+//    public void canCapturePieces() throws Exception
+//    {
+//        Game game = new Game();
+//        Piece knight = game.gameBoard.boardArray[1][0];
+//        Piece pawn = game.gameBoard.boardArray[3][1];
+//        pawn.player = game.player2;
+//        game.gameBoard.movePiece(knight, 3, 1);
+//
+//        assertEquals(knight, game.gameBoard.boardArray[3][1]);
+//    }
 }

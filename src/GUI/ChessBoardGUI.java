@@ -10,6 +10,8 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.MatteBorder;
 
+import Exceptions.InvalidMovementException;
+
 
 
 
@@ -77,7 +79,12 @@ public class ChessBoardGUI {
 
                 else
                 {
-                    selectedPiece.player.myGame.gameBoard.movePiece(selectedPiece, button.getLocation(rv).x / 100, button.getLocation(rv).y / 100);
+                    try {
+						selectedPiece.player.myGame.gameBoard.movePiece(selectedPiece, button.getLocation(rv).x / 100, button.getLocation(rv).y / 100);
+					} catch (InvalidMovementException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
                     if(game.capture)
                     {
                         button.setIcon(null);

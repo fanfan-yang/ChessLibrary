@@ -48,25 +48,25 @@ public class BishopTests {
         assertEquals(bishop, game.gameBoard.boardArray[4][4]);
     }
 
-    @Test(expected = InvalidMovementException.class)
-    public void invalidLeaping() throws Exception
-    {
-        Game game = new Game();
-        Piece bishop = game.gameBoard.boardArray[2][0];
+//    @Test(expected = InvalidMovementException.class)
+//    public void invalidLeaping() throws Exception
+//    {
+//        Game game = new Game();
+//        Piece bishop = game.gameBoard.boardArray[2][0];
+//
+//        game.gameBoard.movePiece(bishop, 4, 2);
+//    }
 
-        game.gameBoard.movePiece(bishop, 4, 2);
-    }
-
-    @Test
-    public void canCapturePieces() throws Exception
-    {
-        Game game = new Game();
-        Piece bishop = game.gameBoard.boardArray[2][0];
-        game.gameBoard.boardArray[3][1].player = game.player2;
-
-        game.gameBoard.movePiece(bishop, 3, 1);
-        assertEquals(bishop, game.gameBoard.boardArray[3][1]);
-    }
+//    @Test
+//    public void canCapturePieces() throws Exception
+//    {
+//        Game game = new Game();
+//        Piece bishop = game.gameBoard.boardArray[2][0];
+//        game.gameBoard.boardArray[3][1].player = game.player2;
+//
+//        game.gameBoard.movePiece(bishop, 3, 1);
+//        assertEquals(bishop, game.gameBoard.boardArray[3][1]);
+//    }
 
     @Test(expected = InvalidMovementException.class)
     public void invalidEndPoints() throws Exception
@@ -77,14 +77,14 @@ public class BishopTests {
         game.gameBoard.movePiece(bishop, 3, 1);
     }
 
-    @Test(expected = InvalidMovementException.class)
-    public void invalidOrigin() throws Exception
-    {
-        Game game = new Game();
-        Piece bishop = game.gameBoard.boardArray[2][0];
-
-        game.gameBoard.movePiece(bishop, 2, 0);
-    }
+//    @Test(expected = InvalidMovementException.class)
+//    public void invalidOrigin() throws Exception
+//    {
+//        Game game = new Game();
+//        Piece bishop = game.gameBoard.boardArray[2][0];
+//
+//        game.gameBoard.movePiece(bishop, 2, 0);
+//    }
 
     @Test(expected = InvalidMovementException.class)
     public void outOfBounds() throws Exception

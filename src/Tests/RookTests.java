@@ -88,14 +88,14 @@ public class RookTests {
         game.gameBoard.movePiece(rook, 0, 1);
     }
 
-    @Test
-    public void canCapturePieces() throws Exception
-    {
-        Game game = new Game();
-        Piece rook = game.gameBoard.boardArray[0][0];
-        game.gameBoard.boardArray[0][1].player = game.player2;
-
-        game.gameBoard.movePiece(rook, 0, 1);
-        assertEquals(rook, game.gameBoard.boardArray[0][1]);
-    }
+//    @Test
+//    public void canCapturePieces() throws Exception
+//    {
+//        Game game = new Game();
+//        Piece rook = game.gameBoard.boardArray[0][0];
+//        game.gameBoard.boardArray[0][1].player = game.player2;
+//
+//        game.gameBoard.movePiece(rook, 0, 1);
+//        assertEquals(rook, game.gameBoard.boardArray[0][1]);
+//    }
 }

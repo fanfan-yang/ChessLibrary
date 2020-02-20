@@ -111,8 +111,9 @@ public class Board {
      * @param piece the piece to move
      * @param finalX the final X location
      * @param finalY the final Y location
+     * @throws InvalidMovementException 
      */
-    public void movePiece(Piece piece, int finalX, int finalY)
+    public void movePiece(Piece piece, int finalX, int finalY) throws InvalidMovementException
     {
         if(isValidMove(piece, finalX, finalY) && piece.isValidPath(finalX, finalY))
         {
@@ -125,18 +126,18 @@ public class Board {
 
             setNewPieceLocation(piece, finalX, finalY);
 
-
         }
 
 
         else
         {
-            try {
-                throw new InvalidMovementException();
-            } catch (InvalidMovementException e) {
-                e.printStackTrace();
-                game.invalid = true;
-            }
+        	throw new InvalidMovementException();
+//            try {
+//                throw new InvalidMovementException();
+//            } catch (InvalidMovementException e) {
+//                e.printStackTrace();
+//                game.invalid = true;
+//            }
         }
 
         return;

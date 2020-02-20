@@ -40,8 +40,8 @@ public class PawnTests {
         Piece pawn = game.gameBoard.boardArray[1][1];
         Piece enemyPawn = new Pawn(2, 2, game.player2);
 
-        game.gameBoard.movePiece(pawn, 2, 2);
-        assertEquals(pawn, game.gameBoard.boardArray[2][2]);
+        game.gameBoard.movePiece(pawn, 1, 2);
+        assertEquals(pawn, game.gameBoard.boardArray[1][2]);
     }
 
     @Test(expected = InvalidMovementException.class)

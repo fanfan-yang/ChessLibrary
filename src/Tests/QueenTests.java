@@ -128,13 +128,13 @@ public class QueenTests {
         game.gameBoard.movePiece(queen, 3, 1);
     }
 
-    @Test
-    public void canCapturePieces() throws Exception
-    {
-        Game game = new Game();
-        Piece queen = game.gameBoard.boardArray[3][0];
-        game.gameBoard.boardArray[3][1].player = game.player2;
-
-        game.gameBoard.movePiece(queen, 3, 1);
-    }
+//    @Test
+//    public void canCapturePieces() throws Exception
+//    {
+//        Game game = new Game();
+//        Piece queen = game.gameBoard.boardArray[3][0];
+//        game.gameBoard.boardArray[3][1].player = game.player2;
+//
+//        game.gameBoard.movePiece(queen, 3, 1);
+//    }
 }
